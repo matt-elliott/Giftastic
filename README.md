@@ -3,7 +3,7 @@
 
 #### TODOS
 [x] - Write algorithm
-[ ] - Write JavaScript
+[x] - Write JavaScript
 [ ] - Style page
 [ ] - Make responsive
 [ ] - Make git tag beta version
@@ -32,10 +32,7 @@
 2. loop over topics and make them into buttons on DOM
   ``
   topics.forEach(function(topic)) {
-    //create figure element and populate with gif and meta data
-    //use data-state to hold if gif is animating or still
-    //use data-still and data-animated to hold paths to still and animated forms of gif
-    ////use mp4 for animation and puse video instead? [submit as side assignment]
+    //create button with topic name
   }
   ``
 3. when user clicks button app should grab ten gifs and display them still
@@ -48,7 +45,10 @@ function getGifs() {
     //for each response item received generate figure, image, and figcaption with meta data
     response.data.forEach(function(item)) {
       //make utility function to create figure elements with jQuery and call here
-      //populate figure elements with data from item
+      //create figure element and populate with gif and meta data
+      //use data-state to hold if gif is animating or still
+      //use data-still and data-animated to hold paths to still and animated forms of gif
+      ////use mp4 for animation and puse video instead? [submit as side assignment]
   });
 }
 ``
