@@ -2,18 +2,18 @@
 ## A curated GIF page
 
 #### TODOS
-[x] - Write algorithm
-[ ] - Write JavaScript
-[ ] - Style page
-[ ] - Make responsive
-[ ] - Make git tag beta version
-[ ] - Submit Beta release
-[ ] - Add favorites functionality to algorithm
-[ ] - Create favorites functionality
-[ ] - Add pagination functionality to algorithm
-[ ] - Create pagination functionality
-[ ] - Make git tag for alpha version
-[ ] - Submit Alpha release
+- [x] Write algorithm
+- [ ] Write JavaScript
+- [ ] Style page
+- [ ] Make responsive
+- [ ] Make git tag beta version
+- [ ] Submit Beta release
+- [ ] Add favorites functionality to algorithm
+- [ ] Create favorites functionality
+- [ ] Add pagination functionality to algorithm
+- [ ] Create pagination functionality
+- [ ] Make git tag for alpha version
+- [ ] Submit Alpha release
 
 
 #### Algorithm
