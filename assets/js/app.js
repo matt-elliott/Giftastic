@@ -40,6 +40,8 @@
 
     queryURL = `https://api.giphy.com/v1/gifs/search?api_key=X66g4vlvwGN7GEKPAEh0hLBGrD5hn85N&q=${query}&limit=${limit}&offset=${page}&rating=R&lang=en`;
     
+    $("body").removeClass("top-padding");
+
     $.ajax({
       url: queryURL,
       method: "GET"
@@ -71,7 +73,10 @@
           gifSourceElement = $("<p>");
           expandButton = $("<button>");
 
-          gifElement.attr("data-expanded", "");
+          gifElement.attr({
+            "data-expanded": "",
+            "class": "col-xs-12 col-sm-6 col-md-5 col-lg-3"
+          });
 
           expandButton
             .attr({
@@ -94,6 +99,7 @@
 
           gifTitleElement.text(item.title);
           gifRatingElement.text(item.rating);
+
           gifSourceElement.html(`<a
             href="${item.source}"
             target="_blank">
@@ -106,7 +112,11 @@
             gifSourceElement
           ]);
 
-          gifElement.append([gifImageElement, gifCaptionElement, expandButton]);
+          gifElement.append([
+            gifImageElement,
+            gifCaptionElement,
+            expandButton
+          ]);
 
           gifArea.append(gifElement);
         });

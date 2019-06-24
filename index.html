@@ -1,39 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content=" width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <head>
+        <meta charset="UTF-8">
+        <meta
+            content="
+                width=device-width,
+                initial-scale=1.0"
+            name="viewport">
+        <meta
+            content="ie=edge"
+            http-equiv="X-UA-Compatible">
 
-  <title>Giftastic!</title>
+        <title>
+        Giftastic!</title>
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/styles.css"></head>
+        <link
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css?family=Russo+One&display=swap"
+            rel="stylesheet">
+        <link
+            href="assets/css/styles.css"
+            rel="stylesheet">
+    </head>
+</html>
 
-  <body class="bg-dark text-light">
+
+
+  <body class="top-padding">
     <div class="container">
       <header id="site-header">
         <div class="row">
-          <div class="logo col-6">
+          <div class="logo col-xs-12 col-md-4">
             <h1>
               Giftastic
             </h1>
             <h6>
-              By Matt Elliott
+              An online gif curation tool
             </h6>
           </div>
-          <div class="col-6" id="topic-input-form">
+          <div class="col-xs-12 col-md-8 text-right" id="topic-input-form">
             <form action="#" name="topic-input-form">
               <label for="topic-input"></label>
               <input type="text" placeholder="New Topic" name="topic-input" class="topic-input" value="">
-              <button type="button" class="submit-btn" value="submit" form="topic-input-form">Search</button>
+              <button type="button" class="btn btn-success submit-btn" value="submit" form="topic-input-form">Search</button>
             </form>
           </div>
         </div>
-        <div class="row">
-          <div id="site-nav">
+        <div id="site-nav" class="row">
 
-          </div>
         </div>
       </header>
       <button class="prev">&lArr;</button>
