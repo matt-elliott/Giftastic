@@ -13,6 +13,12 @@
   $("#gif-list").on("click", ".expander-button", expandGif);
   $(".next").on("click", nextPage);
   $(".prev").on("click", previousPage);
+  $('#topic-input-form .topic-input').on('keypress', function(event) {
+    if(event.key === 'Enter') {
+      // event.preventDefault()};
+      addTopic();
+    }
+  });
 
   function makeButtons() {
     buttonArea.empty();
@@ -167,7 +173,7 @@
     if (searchQuery != "") {
       topics.push(searchQuery);
       makeButtons();
-      getGifs(null, searchQuery, false);
+      getGifs(null, searchQuery, true);
     }
   }
 
