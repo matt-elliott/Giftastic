@@ -15,7 +15,6 @@
   $("#topic-input-form .topic-input").on("keypress", function(event) {
     if (event.key === "Enter") {
       addTopic();
-      $(this).val("");
     }
   });
 
@@ -168,6 +167,7 @@
   function addTopic() {
     event.preventDefault();
     var searchQuery = $("input.topic-input").val();
+    $("input.topic-input").val("");
 
     if (searchQuery != "") {
       topics.push(searchQuery);
