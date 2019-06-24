@@ -1,7 +1,6 @@
 (function init() {
-  var utils = {};
-  var buttonArea = $(`#site-nav`);
-  var topics = [`cats`, `dogs`, `satan`];
+  var buttonArea = $("#site-nav");
+  var topics = ["cats", "dogs", "satan"];
   var limit = 10;
   var page = 0;
   var query;
@@ -13,10 +12,10 @@
   $("#gif-list").on("click", ".expander-button", expandGif);
   $(".next").on("click", nextPage);
   $(".prev").on("click", previousPage);
-  $('#topic-input-form .topic-input').on('keypress', function(event) {
-    if(event.key === 'Enter') {
-      // event.preventDefault()};
+  $("#topic-input-form .topic-input").on("keypress", function(event) {
+    if (event.key === "Enter") {
       addTopic();
+      $(this).val("");
     }
   });
 
@@ -26,7 +25,7 @@
     topics.forEach(function(topic) {
       var button = $(`<button>`);
       button.attr({
-        class: `btn btn-primary gif-btn`,
+        class: `btn btn-primary col gif-btn`,
         value: `${topic}`
       });
 
