@@ -39,59 +39,66 @@
       url: queryURL,
       method: "GET"
     }).then(function(response) {
-      var gifArea = $(`#gif-list`);
-      var gifElement;
-      var gifImageElement;
-      var gifCaptionElement;
-
-      gifArea.empty();
-
-      response.data.forEach(function(item) {
-        gifElement = $('<figure>');
-        gifImageElement = $(`<img>`);
-        gifCaptionElement = $(`<figcaption>`);
-        gifRatingElement = $('<p>');
-        gifTitleElement = $('<p>');
-        gifSourceElement = $('<p>');
-        expandButton = $('<button>');
-
-        gifElement.attr('data-expanded', '');
-
-        expandButton.attr({
-          'class': 'expander-button',
-          'type': 'button',
-        }).html('&#x21D7;');
+      if(response.data.length === 0) {
+        console.log('no resuilts');
         
-        gifRatingElement.attr('class', 'rating');
-        gifTitleElement.attr('class', 'title');
-        gifSourceElement.attr('class', 'source');
+        var html = '<div class="no-results"><h2>Sorry, our droids found nothing.</h2><h6>Maybe try a better search query?</h6></div>';
+        $(`#gif-list`).append(html);
+      } else {
+        var gifArea = $(`#gif-list`);
+        var gifElement;
+        var gifImageElement;
+        var gifCaptionElement;
 
-        gifImageElement.attr({
-          src : item.images.fixed_height_still.url,
-          'data-still' : item.images.fixed_height_still.url,
-          'data-animated' : item.images.fixed_height.url,
-          'data-state' : 'still',
-          class : 'play-btn'
+        gifArea.empty();
+
+        response.data.forEach(function(item) {
+          gifElement = $('<figure>');
+          gifImageElement = $(`<img>`);
+          gifCaptionElement = $(`<figcaption>`);
+          gifRatingElement = $('<p>');
+          gifTitleElement = $('<p>');
+          gifSourceElement = $('<p>');
+          expandButton = $('<button>');
+
+          gifElement.attr('data-expanded', '');
+
+          expandButton.attr({
+            'class': 'expander-button',
+            'type': 'button',
+          }).html('&#x21D7;');
+          
+          gifRatingElement.attr('class', 'rating');
+          gifTitleElement.attr('class', 'title');
+          gifSourceElement.attr('class', 'source');
+
+          gifImageElement.attr({
+            src : item.images.fixed_height_still.url,
+            'data-still' : item.images.fixed_height_still.url,
+            'data-animated' : item.images.fixed_height.url,
+            'data-state' : 'still',
+            class : 'play-btn'
+          });
+
+          gifTitleElement.text(item.title);
+          gifRatingElement.text(item.rating);
+          gifSourceElement.html(`<a
+            href="${item.source}"
+            target="_blank">
+              ${item.source_tld}
+          </a>`);
+
+          gifCaptionElement.append([
+            gifTitleElement, gifRatingElement, gifSourceElement
+          ]);
+
+          gifElement.append([
+            gifImageElement, gifCaptionElement, expandButton
+          ]);
+
+          gifArea.append(gifElement);
         });
-
-        gifTitleElement.text(item.title);
-        gifRatingElement.text(item.rating);
-        gifSourceElement.html(`<a
-          href="${item.source}"
-          target="_blank">
-            ${item.source_tld}
-        </a>`);
-
-        gifCaptionElement.append([
-          gifTitleElement, gifRatingElement, gifSourceElement
-        ]);
-
-        gifElement.append([
-          gifImageElement, gifCaptionElement, expandButton
-        ]);
-
-        gifArea.append(gifElement);
-      });
+      }
     });
   }
 
@@ -115,6 +122,7 @@
       });
     }
   }
+
   function playGif() {
     var thisGif = this;
     var state = $(thisGif).attr('data-state');
@@ -155,6 +163,7 @@
     if( searchQuery != '' ) {
       topics.push(searchQuery);
       makeButtons();
+      getGifs(searchQuery);
     }
   }
 
