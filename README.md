@@ -3,22 +3,34 @@
 
 #### TODOS
 - [x] Write algorithm
+<<<<<<< HEAD
 - [ ] Write JavaScript
 - [ ] Style page
 - [ ] Make responsive
 - [ ] Make git tag beta version
+=======
+- [x] Write JavaScript
+- [x] Style page
+- [x] Make responsive
+>>>>>>> dev
 - [ ] Submit Beta release
 - [ ] Add favorites functionality to algorithm
 - [ ] Create favorites functionality
 - [ ] Add pagination functionality to algorithm
 - [ ] Create pagination functionality
+<<<<<<< HEAD
 - [ ] Make git tag for alpha version
+=======
+>>>>>>> dev
 - [ ] Submit Alpha release
 
 
 #### Algorithm
 1. Create variable equal to an array of topics in string format
+<<<<<<< HEAD
 
+=======
+>>>>>>> dev
   ```javascript
   var topics = […];
   var query = ''; //create query variable as string to be assigned later either by button click or user input 
@@ -34,10 +46,7 @@
 2. loop over topics and make them into buttons on DOM
   ```javascript
   topics.forEach(function(topic)) {
-    //create figure element and populate with gif and meta data
-    //use data-state to hold if gif is animating or still
-    //use data-still and data-animated to hold paths to still and animated forms of gif
-    ////use mp4 for animation and puse video instead? [submit as side assignment]
+    //create button with topic name
   }
   ```
 3. when user clicks button app should grab ten gifs and display them still
@@ -50,7 +59,10 @@ function getGifs() {
     //for each response item received generate figure, image, and figcaption with meta data
     response.data.forEach(function(item)) {
       //make utility function to create figure elements with jQuery and call here
-      //populate figure elements with data from item
+      //create figure element and populate with gif and meta data
+      //use data-state to hold if gif is animating or still
+      //use data-still and data-animated to hold paths to still and animated forms of gif
+      ////use mp4 for animation and puse video instead? [submit as side assignment]
   });
 }
 ```
@@ -62,7 +74,11 @@ function getGifs() {
     else
       stop gif
   }
+<<<<<<< HEAD
   ```
+=======
+  ``
+>>>>>>> dev
 6. add an input that adds user input to buttons
 ```javascript
   function addTopic() {
@@ -70,4 +86,8 @@ function getGifs() {
     //get value from input
     //use jQuery to create new button on DOM
   }
+<<<<<<< HEAD
 ```
+=======
+```
+>>>>>>> dev

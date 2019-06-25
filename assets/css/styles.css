@@ -1,0 +1,87 @@
+body {
+  font-family: "Russo One", Arial, Helvetica, sans-serif;
+  background-color: #020106;
+  color: #CAC7C2;
+  transition: all 350ms ease-in-out;
+}
+body.top-padding {
+  padding-top: 25vh;
+}
+#site-header {
+  padding: 20px 0;
+}
+#site-header .logo h1 {
+  color: #CAB99F;
+  font-size: 5rem;
+}
+#site-header .logo h6 {
+  color: #9A9B96;
+  font-size: 1.64rem;
+}
+#site-header form {
+  padding: 10px 0;
+}
+#site-header form .submit-btn,
+.next {
+  background-color: #AB4340;
+  border-color: #CAC7C2;
+  border-style: dotted;
+  color: #CAB99F;
+}
+.next {
+  display: block;
+  width: 80%;
+  margin: 60px auto;
+}
+#site-header #site-nav {
+  padding: 15px 0;
+}
+#site-header #site-nav .gif-btn {
+  margin: 15px;
+  background-color: #AB4340;
+  border-color: #CAC7C2;
+  border-style: dotted;
+  color: #CAB99F;
+}
+
+#gif-list figure {
+  padding: 15px;
+  overflow: hidden;
+}
+[data-expanded="expanded"] {
+  max-width: none;
+}
+#gif-list figure:nth-child(4n) {
+  border-right: none;
+}
+#gif-list figure img {
+  min-width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+#gif-list figure figcaption {
+  background-color: #1f1919;
+  padding: 1rem 0.5rem 0.5rem;
+  border: 1px dashed #333;
+}
+#gif-list figure figcaption p {
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+  word-break: break-all;
+}
+@media screen and (max-width: 992px) {
+  #site-header .logo h1,
+  #site-header .logo h6 {
+    text-align: center;
+  }
+  #topic-input-form .topic-input {
+    width: 100%;
+    text-align: center;
+  }
+  #topic-input-form .submit-btn {
+    display: block;
+    width: 65%;
+    margin: 15px auto;
+  }
+}
