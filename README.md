@@ -3,34 +3,19 @@
 
 #### TODOS
 - [x] Write algorithm
-<<<<<<< HEAD
-- [ ] Write JavaScript
-- [ ] Style page
-- [ ] Make responsive
-- [ ] Make git tag beta version
-=======
 - [x] Write JavaScript
 - [x] Style page
 - [x] Make responsive
->>>>>>> dev
 - [ ] Submit Beta release
 - [ ] Add favorites functionality to algorithm
 - [ ] Create favorites functionality
 - [ ] Add pagination functionality to algorithm
 - [ ] Create pagination functionality
-<<<<<<< HEAD
-- [ ] Make git tag for alpha version
-=======
->>>>>>> dev
 - [ ] Submit Alpha release
 
 
 #### Algorithm
 1. Create variable equal to an array of topics in string format
-<<<<<<< HEAD
-
-=======
->>>>>>> dev
   ```javascript
   var topics = […];
   var query = ''; //create query variable as string to be assigned later either by button click or user input 
@@ -74,11 +59,7 @@ function getGifs() {
     else
       stop gif
   }
-<<<<<<< HEAD
   ```
-=======
-  ``
->>>>>>> dev
 6. add an input that adds user input to buttons
 ```javascript
   function addTopic() {
@@ -86,8 +67,4 @@ function getGifs() {
     //get value from input
     //use jQuery to create new button on DOM
   }
-<<<<<<< HEAD
 ```
-=======
-```
->>>>>>> dev
