@@ -2,15 +2,13 @@ body {
   font-family: "Russo One", Arial, Helvetica, sans-serif;
   background-color: #020106;
   color: #CAC7C2;
+  transition: all 350ms ease-in-out;
 }
 body.top-padding {
   padding-top: 25vh;
 }
 #site-header {
   padding: 20px 0;
-}
-#site-header {
-  border-bottom: 1px solid #203F59;
 }
 #site-header .logo h1 {
   color: #CAB99F;
@@ -23,11 +21,17 @@ body.top-padding {
 #site-header form {
   padding: 10px 0;
 }
-#site-header form .submit-btn {
+#site-header form .submit-btn,
+.next {
   background-color: #AB4340;
   border-color: #CAC7C2;
   border-style: dotted;
   color: #CAB99F;
+}
+.next {
+  display: block;
+  width: 80%;
+  margin: 60px auto;
 }
 #site-header #site-nav {
   padding: 15px 0;
@@ -39,15 +43,13 @@ body.top-padding {
   border-style: dotted;
   color: #CAB99F;
 }
-#gif-list {
-  margin: 0;
-}
 
 #gif-list figure {
-  /* background-color: #9A9B96; */
-  border-right: 1px solid #9A9B96;
   padding: 15px;
   overflow: hidden;
+}
+[data-expanded="expanded"] {
+  max-width: none;
 }
 #gif-list figure:nth-child(4n) {
   border-right: none;
@@ -57,4 +59,32 @@ body.top-padding {
   max-width: 100%;
   height: auto;
   margin: 0 auto;
+}
+#gif-list figure figcaption {
+  background-color: #1f1919;
+  padding: 1rem 0.5rem 0.5rem;
+  border: 1px dashed #333;
+}
+#gif-list figure figcaption .title {
+  /* margin-top: 1rem; */
+}
+#gif-list figure figcaption p {
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+  word-break: break-all;
+}
+@media screen and (max-width: 992px) {
+  #site-header .logo h1,
+  #site-header .logo h6 {
+    text-align: center;
+  }
+  #topic-input-form .topic-input {
+    width: 100%;
+    text-align: center;
+  }
+  #topic-input-form .submit-btn {
+    display: block;
+    width: 65%;
+    margin: 15px auto;
+  }
 }

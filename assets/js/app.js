@@ -1,6 +1,11 @@
 (function init() {
   var buttonArea = $("#site-nav");
-  var topics = ["cats", "dogs", "satan"];
+  var topics = [
+    "kidmograph",
+    "moonpie",
+    "clowns",
+    "bohemian grove"
+  ];
   var limit = 10;
   var page = 0;
   var query;
@@ -9,7 +14,6 @@
   $("#site-nav").on("click", ".gif-btn", {emptyGifArea: true}, getGifs);
   $("#gif-list").on("click", ".play-btn", playGif);
   $("#topic-input-form").on("click", ".submit-btn", addTopic);
-  $("#gif-list").on("click", ".expander-button", expandGif);
   $(".next").on("click", nextPage);
   $(".prev").on("click", previousPage);
   $("#topic-input-form .topic-input").on("keypress", function(event) {
@@ -17,7 +21,7 @@
       addTopic();
     }
   });
-
+  $('.next').hide();
   function makeButtons() {
     buttonArea.empty();
 
@@ -71,19 +75,11 @@
           gifRatingElement = $("<p>");
           gifTitleElement = $("<p>");
           gifSourceElement = $("<p>");
-          expandButton = $("<button>");
 
           gifElement.attr({
             "data-expanded": "",
-            "class": "col-xs-12 col-sm-6 col-md-5 col-lg-3"
+            "class": "col-xs-12 col-sm-6 col-lg-3"
           });
-
-          expandButton
-            .attr({
-              class: "expander-button",
-              type: "button"
-            })
-            .html("&#x21D7;");
 
           gifRatingElement.attr("class", "rating");
           gifTitleElement.attr("class", "title");
@@ -115,34 +111,13 @@
           gifElement.append([
             gifImageElement,
             gifCaptionElement,
-            expandButton
           ]);
 
           gifArea.append(gifElement);
+          $('.next').show();
         });
       }
     });
-  }
-
-  function expandGif() {
-    var figure = $(this).parent("figure");
-    var image = figure.find(".play-btn");
-
-    if (figure.attr("data-expanded") === "") {
-      figure.attr("data-expanded", "expanded");
-      figure.css("width", "100%");
-      image.delay(500).css({
-        width: "100%",
-        height: "auto"
-      });
-    } else {
-      figure.attr("data-expanded", "");
-      figure.css("width", "");
-      image.css({
-        width: "",
-        height: ""
-      });
-    }
   }
 
   function playGif() {

@@ -4,15 +4,13 @@
 #### TODOS
 - [x] Write algorithm
 - [x] Write JavaScript
-- [ ] Style page
-- [ ] Make responsive
-- [ ] Make git tag beta version
+- [x] Style page
+- [x] Make responsive
 - [ ] Submit Beta release
 - [ ] Add favorites functionality to algorithm
 - [ ] Create favorites functionality
 - [ ] Add pagination functionality to algorithm
 - [ ] Create pagination functionality
-- [ ] Make git tag for alpha version
 - [ ] Submit Alpha release
 
 
