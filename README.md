@@ -6,7 +6,7 @@
 - [x] Write JavaScript
 - [x] Style page
 - [x] Make responsive
-- [ ] Submit Beta release
+- [x] Submit Beta release
 - [ ] Add favorites functionality to algorithm
 - [ ] Create favorites functionality
 - [ ] Add pagination functionality to algorithm
