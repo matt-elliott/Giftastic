@@ -6,6 +6,9 @@ https://matt-elliott.github.io/Giftastic
 ## USAGE
 Follow link above and type in a search term to receive gifs.
 
+## THE BUILD
+Built on Node.js this app utilizes the Giftastic api to serve gifs that match the user's search.
+
 #### TODOS
 - [x] Write algorithm
 - [x] Write JavaScript
