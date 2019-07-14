@@ -1,7 +1,7 @@
 # Giftastic
 ## A curated GIF page
 
-https://matt-elliott.github.io/APIProject/
+https://matt-elliott.github.io/Giftastic
 
 ## USAGE
 Follow link above and type in a search term to receive gifs.
