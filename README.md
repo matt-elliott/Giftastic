@@ -1,6 +1,11 @@
 # Giftastic
 ## A curated GIF page
 
+https://matt-elliott.github.io/APIProject/
+
+## USAGE
+Follow link above and type in a search term to receive gifs.
+
 #### TODOS
 - [x] Write algorithm
 - [x] Write JavaScript
@@ -14,7 +19,7 @@
 - [ ] Submit Alpha release
 
 
-#### Algorithm
+#### Psuedo Code
 1. Create variable equal to an array of topics in string format
   ```javascript
   var topics = […];
